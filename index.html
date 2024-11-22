@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" type="image/svg+xml">
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298, #53a7ea); /* تدرج ألوان مذهل */
+            background-size: 400% 400%; /* لتحريك الخلفية */
+            animation: gradientBackground 10s ease infinite; /* حركة سلسة */
+            color: #333;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7); /* لون شفاف */
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 2px solid #007BFF;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column; /* ترتيب عمودي */
+            align-items: center;
+            gap: 10px; /* مسافة بين الأزرار */
+            margin-top: 1rem;
+        }
+
+        .nav-button {
+            width: 90%;
+            max-width: 400px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .nav-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5); /* تأثير ظل عند التحويم */
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .card {
+            background-color: rgba(0, 123, 255, 0.9);
+            color: #fff;
+            margin: 1rem auto;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+        }
+
+        .project-button {
+            width: 100%;
+            background-color: #fff;
+            color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5); /* تأثير ظل عند التحويم */
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.7); /* لون شفاف */
+            color: #fff;
+            border-top: 2px solid #007BFF;
+        }
+
+        /* Animation for Background */
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Responsive Styling */
+        @media (min-width: 768px) {
+            nav {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 15px;
+                justify-content: center;
+            }
+
+            .nav-button {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <button class="nav-button" onclick="openLink('https://github.com/mohamedlunar')">GitHub</button>
+            <button class="nav-button" onclick="openLink('https://youtube.com/@MohamedLunar')">YouTube</button>
+            <button class="nav-button" onclick="openLink('https://linkedin.com/in/mohamed4lunar')">LinkedIn</button>
+        </nav>
+    </header>
+    <main>
+        <section id="projects">
+            <div class="card">
+                <h2>PyANSI3</h2>
+                <p>A python package you can color the font with it.</p>
+                <button class="project-button" onclick="openLink('https://github.com/mohamedlunar/pyansi3')">View on GitHub</button>
+                <button class="project-button" onclick="openLink('https://pypi.org/project/py-ansi3')">View on PyPI</button>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MohamedLunar</p>
+    </footer>
+    <script>
+        // Function to open links
+        function openLink(url) {
+            const button = event.target;
+
+            // Add animation class
+            button.classList.add('clicked');
+
+            // Remove animation class after animation ends
+            setTimeout(() => {
+                button.classList.remove('clicked');
+            }, 200);
+
+            // Open the link
+            setTimeout(() => {
+                window.open(url, '_blank');
+            }, 300);
+        }
+    </script>
+</body>
+</html>
