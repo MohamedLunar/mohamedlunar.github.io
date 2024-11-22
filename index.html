@@ -68,6 +68,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             max-width: 400px;
+            text-align: left;
         }
 
         .project-button {
@@ -120,6 +121,24 @@
 
             .nav-button {
                 width: auto;
+                padding: 15px 20px;
+                font-size: 20px;
+            }
+
+            .card {
+                max-width: 600px; /* Increased card width for larger screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-button {
+                font-size: 16px; /* Adjust font size for mobile */
+                padding: 12px;
+            }
+
+            .card {
+                max-width: 100%; /* Full-width cards on small screens */
+                margin: 10px;
             }
         }
     </style>
@@ -141,7 +160,6 @@
                 <p>A python package you can color the font with it.</p>
                 <button class="project-button" onclick="openLink('https://github.com/mohamedlunar/pyansi3')">View on GitHub</button>
                 <button class="project-button" onclick="openLink('https://pypi.org/project/py-ansi3')">View on PyPI</button>
-            </div>
             </div>
         </section>
     </main>
