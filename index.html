@@ -11,14 +11,14 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #1e3c72, #2a5298, #53a7ea); /* تدرج ألوان مذهل */
-            background-size: 400% 400%; /* لتحريك الخلفية */
-            animation: gradientBackground 10s ease infinite; /* حركة سلسة */
+            background: linear-gradient(135deg, #1e3c72, #2a5298, #53a7ea);
+            background-size: 400% 400%;
+            animation: gradientBackground 10s ease infinite;
             color: #333;
         }
 
         header {
-            background: rgba(0, 0, 0, 0.7); /* لون شفاف */
+            background: rgba(0, 0, 0, 0.7);
             color: #fff;
             padding: 1rem;
             text-align: center;
@@ -31,9 +31,9 @@
 
         nav {
             display: flex;
-            flex-direction: column; /* ترتيب عمودي */
+            flex-direction: column;
             align-items: center;
-            gap: 10px; /* مسافة بين الأزرار */
+            gap: 10px;
             margin-top: 1rem;
         }
 
@@ -52,12 +52,22 @@
 
         .nav-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5); /* تأثير ظل عند التحويم */
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
         }
 
         main {
             padding: 2rem;
             text-align: center;
+        }
+
+        .description {
+            background-color: rgba(0, 123, 255, 0.9);
+            color: #fff;
+            margin: 1rem auto;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
         }
 
         .card {
@@ -86,13 +96,13 @@
 
         .project-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5); /* تأثير ظل عند التحويم */
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
         }
 
         footer {
             text-align: center;
             padding: 1rem;
-            background: rgba(0, 0, 0, 0.7); /* لون شفاف */
+            background: rgba(0, 0, 0, 0.7);
             color: #fff;
             border-top: 2px solid #007BFF;
         }
@@ -126,18 +136,18 @@
             }
 
             .card {
-                max-width: 600px; /* Increased card width for larger screens */
+                max-width: 600px;
             }
         }
 
         @media (max-width: 480px) {
             .nav-button {
-                font-size: 16px; /* Adjust font size for mobile */
+                font-size: 16px;
                 padding: 12px;
             }
 
             .card {
-                max-width: 100%; /* Full-width cards on small screens */
+                max-width: 100%;
                 margin: 10px;
             }
         }
@@ -153,11 +163,17 @@
         </nav>
     </header>
     <main>
+        <section id="description">
+            <div class="description">
+                <h3>Welcome to MohamedLunar's website!</h3>
+                <p>This is the official platform where you can explore my projects, learn about my work, and connect with me on various social media platforms. Feel free to browse around and get in touch.</p>
+            </div>
+        </section>
         <section id="projects">
             <h2>Projects</h2>
             <div class="card">
                 <h3>PyANSI3</h3>
-                <p>A python package you can color the font with it.</p>
+                <p>A Python package that allows you to color text in the terminal with ease.</p>
                 <button class="project-button" onclick="openLink('https://github.com/mohamedlunar/pyansi3')">View on GitHub</button>
                 <button class="project-button" onclick="openLink('https://pypi.org/project/py-ansi3')">View on PyPI</button>
             </div>
